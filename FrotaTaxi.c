@@ -6,9 +6,9 @@ int main(void){
 	
 	scanf("%f %f %f %f", &A, &G, &Ra, &Rg);
 	
-	if(A == G || A/Ra > G/Rg){
-		printf("G");
-	}else{
+	if((Ra/A) > (Rg/G)){
 		printf("A");
+	}else{
+		printf("G");
 	}
 }
