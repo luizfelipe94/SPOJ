@@ -1,29 +1,29 @@
 #include <stdio.h>
 
 struct bandeja{
-	int lata, copo;
+	int L, C;
 };
 
 int main(){
 	
 	
-	int qteBandejas=0, qteCoposQuebrados=0;
+	int N=0, qteCoposQuebrados=0;
 	
-	scanf("%d", &qteBandejas);
+	scanf("%d", &N);
 	
-	struct bandeja bandeja[qteBandejas];
+	struct bandeja bandeja[N];
 	
 	int i=0;
 	
 	
-	while(i < qteBandejas){
-		scanf("%d %d", &bandeja[i].lata, &bandeja[i].copo);
+	while(i < N){
+		scanf("%d %d", &bandeja[i].L, &bandeja[i].C);
 		i++;
 	}
 	
-	for(i=0; i<=qteBandejas; i++){
-		if(bandeja[i].lata > bandeja[i].copo){
-			qteCoposQuebrados += bandeja[i].copo;
+	for(i=0; i<N; i++){
+		if(bandeja[i].L > bandeja[i].C){
+			qteCoposQuebrados += bandeja[i].C;
 		}
 	}
 	
